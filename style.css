@@ -46,7 +46,7 @@ header {
 
 .tagline {
     font-size: 12px;
-    color: #c1121f;
+    color: #20b2aa;
     margin: 0;
 }
 
@@ -65,7 +65,7 @@ header {
 
 .navbar a:hover,
 .navbar a.active {
-    color: #c1121f;
+    color: #20b2aa;
 }
 
 main {
@@ -124,7 +124,7 @@ section {
 }
 
 .btn {
-    background: #c1121f;
+    background: #20b2aa;
     color: #fff;
     padding: 12px 30px;
     border: none;
@@ -140,7 +140,7 @@ section {
 }
 
 .btn:hover {
-    background: #a00d1d;
+    background: #136c60;
     transform: scale(1.02);
 }
 
@@ -176,7 +176,7 @@ section {
     background: #f0f8ff;
     padding: 20px;
     border-radius: 8px;
-    border-left: 4px solid #c1121f;
+    border-left: 4px solid #20b2aa;
 }
 
 .service-card h3 {
@@ -216,8 +216,8 @@ section {
 }
 
 .package.featured {
-    border-color: #c1121f;
-    box-shadow: 0 4px 15px rgba(193,18,31,0.2);
+    border-color: #20b2aa;
+    box-shadow: 0 4px 15px rgba(32,178,170,0.2);
     transform: scale(1.05);
 }
 
