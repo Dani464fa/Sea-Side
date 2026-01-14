@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Sea Side</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo-section">
+                <h1>🌊 Sea Side</h1>
+                <p class="tagline">Expéditions Maritimes Premium</p>
+            </div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="about.html">À Propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="header-section">
+            <h1>Nos Services</h1>
+            <p>Découvrez nos expéditions maritimes uniques</p>
+        </section>
+
+        <section class="services">
+            <div class="grid">
+                <div class="service-card">
+                    <h3>🌊 Croisière Côtière</h3>
+                    <p>2 jours d'exploration côtière</p>
+                    <p>Découvrez des villages pittoresques et plages isolées</p>
+                    <p class="price">À partir de 299€</p>
+                    <a href="booking.html" class="btn">Réserver</a>
+                </div>
+
+                <div class="service-card">
+                    <h3>🤿 Expédition Snorkeling</h3>
+                    <p>Plongée dans les eaux cristallines</p>
+                    <p>Observez la vie marine avec guides experts</p>
+                    <p class="price">À partir de 149€</p>
+                    <a href="booking.html" class="btn">Réserver</a>
+                </div>
+
+                <div class="service-card">
+                    <h3>⛵ Cours de Voile</h3>
+                    <p>3 jours avec instructeurs certifiés</p>
+                    <p>Certification reconnue incluse</p>
+                    <p class="price">À partir de 499€</p>
+                    <a href="booking.html" class="btn">Réserver</a>
+                </div>
+
+                <div class="service-card">
+                    <h3>📸 Safari Photographique</h3>
+                    <p>Capturez la beauté de la mer</p>
+                    <p>Coaching professionnel inclus</p>
+                    <p class="price">À partir de 399€</p>
+                    <a href="booking.html" class="btn">Réserver</a>
+                </div>
+
+                <div class="service-card">
+                    <h3>🎣 Pêche Sportive</h3>
+                    <p>Journée en haute mer</p>
+                    <p>Équipement complet fourni</p>
+                    <p class="price">À partir de 249€</p>
+                    <a href="booking.html" class="btn">Réserver</a>
+                </div>
+
+                <div class="service-card">
+                    <h3>🎉 Événements Privés</h3>
+                    <p>Mariages et réceptions en mer</p>
+                    <p>Package personnalisé</p>
+                    <p class="price">À partir de 1999€</p>
+                    <a href="booking.html" class="btn">Réserver</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="packages">
+            <h2>Forfaits Spéciaux</h2>
+            <div class="grid-3">
+                <div class="package">
+                    <h3>Découverte</h3>
+                    <p class="price">699€</p>
+                    <ul>
+                        <li>✓ 2 croisières</li>
+                        <li>✓ 1 journée snorkeling</li>
+                        <li>✓ Repas inclus</li>
+                    </ul>
+                    <a href="booking.html" class="btn">Choisir</a>
+                </div>
+
+                <div class="package featured">
+                    <h3>Aventurier</h3>
+                    <p class="price">1299€</p>
+                    <ul>
+                        <li>✓ 5 jours d'aventures</li>
+                        <li>✓ Cours de voile</li>
+                        <li>✓ Repas gastronomiques</li>
+                    </ul>
+                    <a href="booking.html" class="btn">Choisir</a>
+                </div>
+
+                <div class="package">
+                    <h3>VIP</h3>
+                    <p class="price">2499€</p>
+                    <ul>
+                        <li>✓ 7 jours complets</li>
+                        <li>✓ Cabine privée</li>
+                        <li>✓ Chef personnel</li>
+                    </ul>
+                    <a href="booking.html" class="btn">Choisir</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sea Side</p>
+        <p>📧 info@seaside.com | 📍 Port de la Rochelle</p>
+    </footer>
+
+    <button id="scrollTopBtn" class="scroll-top-btn">⬆️</button>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Bouton scroll to top
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            scrollTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+        });
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+</body>
+</html>
