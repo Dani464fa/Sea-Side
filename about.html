@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos - Sea Side</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo-section">
+                <h1>🌊 Sea Side</h1>
+                <p class="tagline">Expéditions Maritimes Premium</p>
+            </div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html" class="active">À Propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="header-section">
+            <h1>À Propos de Sea Side</h1>
+            <p>Votre partenaire de confiance pour les aventures maritimes</p>
+        </section>
+
+        <section class="about-content">
+            <h2>Notre Histoire</h2>
+            <p>Sea Side a été fondée en 2010 par Marc Delorme, un capitaine passionné avec plus de 25 ans d'expérience en navigation. Son rêve était simple : partager la magie et la beauté de l'océan avec des voyageurs du monde entier. Ce qui a commencé comme une petite aventure avec un seul bateau s'est progressivement transformé en une entreprise de renom reconnue internationalement.</p>
+            
+            <p>Durant les premières années, Marc a construit sa réputation en offrant des expériences authentiques et inoubliables à chaque client. Il a recruté une équipe de professionnels passionnés, tous partageant sa vision : créer des moments magiques en mer tout en respectant l'environnement marin. Chaque expédition était soigneusement planifiée pour offrir un équilibre parfait entre aventure, confort et découverte.</p>
+            
+            <p>Aujourd'hui, plus de 15 années plus tard, Sea Side opère une flotte moderne de 12 bateaux et accueille plus de 250 expéditions chaque année. Nous avons eu le privilège d'accueillir plus de 15 000 voyageurs satisfaits venant de plus de 60 pays différents. Notre taux de satisfaction de 98% témoigne de notre engagement envers l'excellence et la qualité du service.</p>
+            
+            <p>Mais pour nous, ce n'est jamais juste une question de chiffres. C'est l'impact que nous créons : les sourires sur les visages des familles découvrant les merveilles sous-marines, les couples renouvelant leurs vœux au coucher du soleil en mer, les enfants émerveillés par leur première expérience de navigation. Ces moments précieux sont le cœur de notre mission.</p>
+            
+            <h2>Nos Valeurs</h2>
+            <p><strong>Excellence :</strong> Chaque détail compte. De la qualité de nos bateaux à la formation de notre équipe, nous visons l'excellence dans tous les aspects de notre service.</p>
+            
+            <p><strong>Durabilité :</strong> Nous nous engageons à protéger les écosystèmes marins. 10% de nos bénéfices sont investis dans les programmes de conservation marine et le nettoyage des côtes.</p>
+            
+            <p><strong>Authenticité :</strong> Nous croyons aux expériences authentiques. Pas de spectacles, pas de fausse promesse - juste la nature brute et magnifique de l'océan.</p>
+            
+            <p><strong>Communauté :</strong> Nous travaillons en étroite collaboration avec les communautés côtières locales, contribuant au développement économique durable et à la préservation des cultures maritimes.</p>
+        </section>
+
+        <section class="team">
+            <h2>Notre Équipe</h2>
+            <div class="grid">
+                <div class="member">
+                    <h3>Marc Delorme</h3>
+                    <p class="role">Capitaine Fondateur</p>
+                    <p>25 ans d'expérience maritime</p>
+                </div>
+                <div class="member">
+                    <h3>Sophie Bernard</h3>
+                    <p class="role">Directrice des Opérations</p>
+                    <p>18 ans dans l'industrie touristique</p>
+                </div>
+                <div class="member">
+                    <h3>Antoine Rousseau</h3>
+                    <p class="role">Instructeur en Plongée</p>
+                    <p>Biologiste marin certifié PADI</p>
+                </div>
+                <div class="member">
+                    <h3>Isabelle Martin</h3>
+                    <p class="role">Chef Cuisinier</p>
+                    <p>Spécialiste de cuisine méditerranéenne</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <h2>Nos Réalisations</h2>
+            <div class="grid-4">
+                <div class="stat">
+                    <p class="number">15,000+</p>
+                    <p>Voyageurs Satisfaits</p>
+                </div>
+                <div class="stat">
+                    <p class="number">250+</p>
+                    <p>Expéditions par An</p>
+                </div>
+                <div class="stat">
+                    <p class="number">98%</p>
+                    <p>Taux de Satisfaction</p>
+                </div>
+                <div class="stat">
+                    <p class="number">40,000</p>
+                    <p>Km de Navigation</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="awards">
+            <h2>Récompenses</h2>
+            <div class="grid">
+                <p>🏆 Meilleur Opérateur Maritime Français 2024</p>
+                <p>🌟 Certification Tourisme Durable</p>
+                <p>👑 Palme d'Or du Service Client 2023</p>
+                <p>♻️ Engagement Environnemental</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sea Side</p>
+        <p>📧 info@seaside.com | 📍 Port de la Rochelle</p>
+    </footer>
+
+    <button id="scrollTopBtn" class="scroll-top-btn">⬆️</button>
+
+    <script>
+        // Animation des compteurs
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 30;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target.toLocaleString();
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current).toLocaleString();
+                }
+            }, 30);
+        }
+
+        // Déclencher l'animation quand l'utilisateur arrive à la section stats
+        const statsSection = document.querySelector('.stats');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    document.querySelectorAll('.stat .number').forEach(el => {
+                        const text = el.textContent;
+                        const num = parseInt(text.replace(/[^0-9]/g, ''));
+                        if (!el.classList.contains('animated')) {
+                            animateCounter(el, num);
+                            el.classList.add('animated');
+                        }
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        if (statsSection) observer.observe(statsSection);
+
+        // Bouton scroll to top
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.style.display = 'block';
+            } else {
+                scrollTopBtn.style.display = 'none';
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

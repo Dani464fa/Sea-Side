@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation - Sea Side</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo-section">
+                <h1>🌊 Sea Side</h1>
+                <p class="tagline">Expéditions Maritimes Premium</p>
+            </div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">À Propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="header-section">
+            <h1>Réserver Votre Aventure</h1>
+            <p>Remplissez le formulaire ci-dessous pour réserver votre expédition maritime</p>
+        </section>
+
+        <section class="booking-section">
+            <div class="form-container">
+                <form id="bookingForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="prenom">Prénom *</label>
+                            <input type="text" id="prenom" placeholder="Jean" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nom">Nom *</label>
+                            <input type="text" id="nom" placeholder="Dupont" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" placeholder="exemple@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telephone">Téléphone</label>
+                        <input type="tel" id="telephone" placeholder="+33 6 XX XX XX XX">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">Date de naissance *</label>
+                        <input type="date" id="date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="demandes">Demandes spéciales</label>
+                        <textarea id="demandes" placeholder="Avez-vous des demandes particulières ?"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Confirmer la Réservation</button>
+                    <a href="services.html" class="btn-cancel">Annuler</a>
+                </form>
+
+                <div id="confirmation" class="confirmation" style="display: none;">
+                    <h2>✅ Réservation Confirmée !</h2>
+                    <p>Merci <span id="nomAffiche"></span> !</p>
+                    <div class="confirmation-details">
+                        <p><strong>Email :</strong> <span id="emailAffiche"></span></p>
+                        <p><strong>Date de naissance :</strong> <span id="dateAffiche"></span></p>
+                    </div>
+                    <p class="confirmation-message">
+                        📧 Un email de confirmation a été envoyé à votre adresse email.<br>
+                        Notre équipe vous contactera dans les 24h pour finalisé les détails.
+                    </p>
+                    <a href="index.html" class="btn">Retour à l'accueil</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sea Side</p>
+        <p>📧 info@seaside.com | 📍 Port de la Rochelle</p>
+    </footer>
+
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const prenom = document.getElementById('prenom').value;
+            const nom = document.getElementById('nom').value;
+            const email = document.getElementById('email').value;
+            const date = document.getElementById('date').value;
+
+            // Afficher la confirmation
+            document.getElementById('nomAffiche').textContent = prenom + ' ' + nom;
+            document.getElementById('emailAffiche').textContent = email;
+            document.getElementById('dateAffiche').textContent = date;
+
+            document.getElementById('bookingForm').style.display = 'none';
+            document.getElementById('confirmation').style.display = 'block';
+
+            console.log('Réservation enregistrée :', {prenom, nom, email, date});
+        });
+    </script>
+</body>
+</html>
